@@ -22,11 +22,7 @@ namespace XGame.Domain
             Email = email;
             Senha = senha;
 
-
-            new AddNotifications<Jogador>(this)
-                .IfNotEmail(x => x.Email.Endereco, "Informe um e-mail válido")
-                .IfNullOrEmptyOrInvalidLength(x=> x.Senha, 6, 32, "A senha deve ter entre 6 a 32 letras");
-
+            new AddNotifications<Jogador>(this).IfNullOrEmptyOrInvalidLength(x=> x.Senha, 6, 32, "A senha deve ter entre 6 a 32 letras");
 
         }
     }

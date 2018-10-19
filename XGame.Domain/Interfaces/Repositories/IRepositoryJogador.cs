@@ -9,7 +9,7 @@ namespace XGame.Domain.Interfaces.Repositories
 {
     public interface IRepositoryJogador
     {
-        AutenticarJogadorResponse AutenticarJogador(AutenticarJogadorRequest request);
+        AutenticarJogadorResponse AutenticarJogador(string email, string senha);
 
         Guid AdicionarJogador(Jogador jogador);
     }
